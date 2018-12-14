@@ -79,7 +79,7 @@ if [ "$action" == 'create' ]
 				AllowOverride All
 			</Directory>
 			<Directory $rootDir>
-				Options Indexes FollowSymLinks MultiViews
+			    Options FollowSymLinks
 				AllowOverride all
 				Require all granted
 			</Directory>
