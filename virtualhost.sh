@@ -2,6 +2,11 @@
 ### Set Language
 TEXTDOMAIN=virtualhost
 
+# add domain
+# ./virtualhost.sh create domain.com /var/www/domain.com
+# remove domain
+# ./virtualhost.sh delete domain.com /var/www/domain.com
+
 ### Set default parameters
 action=$1
 domain=$2
