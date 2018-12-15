@@ -21,6 +21,16 @@ sitesAvailabledomain=$sitesAvailable$domain.conf
 
 ### don't modify from here unless you know what you are doing ####
 
+if [ "$action" == '-h' ] || [ "$action" == '--help' ]
+	then
+		echo -e "\t--- "
+		echo -e "\tCreate domain: './virtualhost.sh create domain.com /var/www/domain.com'"
+		echo -e "\t--- "
+		echo -e "\tDelete domain: './virtualhost.sh delete domain.com /var/www/domain.com'"
+		echo -e "\t--- "
+		exit;
+fi
+
 if [ "$(whoami)" != 'root' ]; then
 	echo $"You have no permission to run $0 as non-root user. Use sudo"
 		exit 1;
